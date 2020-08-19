@@ -1,3 +1,9 @@
+config AHA2904
+    bool
+    default y if PCI_DEVICES
+    depends on PCI
+    select SCSI
+
 config SCSI
     bool
 
