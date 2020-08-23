@@ -1,11 +1,10 @@
-config AHA2904
+config SCSI
+    bool
+
+config AHA2904_SCSI_PCI
     bool
     default y if PCI_DEVICES
     depends on PCI
-    select SCSI
-
-config SCSI
-    bool
 
 config LSI_SCSI_PCI
     bool
